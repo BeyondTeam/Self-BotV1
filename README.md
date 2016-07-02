@@ -47,4 +47,4 @@ Seed Team
 
 #[@BeyondTeam](https://telegram.me/BeyondTeam)
 
-موفق باشید -_-
+#موفق باشید -_-
