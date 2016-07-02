@@ -58,9 +58,9 @@ tmux new-session -s script "bash beyond.sh -t"
 
 #[@BeyondTeam](https://telegram.me/BeyondTeam)
 
+###اگر مشکلی داشتید به لینک های زیر بیاید و مطرح کنید
 #[TeleBeyond Support](https://telegram.me/joinchat/DH-5lD7jQzw--m36LgqOVA)
 
 #[Api-TeleBeyond Development](https://telegram.me/joinchat/CVyJuz6_PJBUrk_w--1JXw)
-###اگر مشکلی داشتید به لینک های بالا بیاید و مطرح کنید
 
 #موفق باشید -_-
