@@ -1,7 +1,7 @@
 local function toimage(msg, success, result)
   local receiver = get_receiver(msg)
   if success then
-    local file = './data/stickers/'..msg.from.id..'.jpg'
+    local file = './data/photos/'..msg.from.id..'.jpg'
     print('File downloaded to:', result)
     os.rename(result, file)
     print('File moved to:', file)
