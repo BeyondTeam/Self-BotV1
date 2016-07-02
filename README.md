@@ -32,7 +32,6 @@ killall tmux
 killall telegram-cli
 tmux new-session -s script "bash beyond.sh -t"
 ```
-# Sudo User
 
 #Developer&Founder : 
 #[SoLiD021](https://telegram.me/SoLiD021)
@@ -42,10 +41,10 @@ tmux new-session -s script "bash beyond.sh -t"
 # Special Thx To :
 Seed Team
 
-#And All My Friends :D
+###And All My Friends :D
 
-### Team Channel :
+#Team Channel :
 
-[@BeyondTeam](https://telegram.me/BeyondTeam)
+#[@BeyondTeam](https://telegram.me/BeyondTeam)
 
 موفق باشید -_-
