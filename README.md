@@ -13,18 +13,19 @@ git clone https://github.com/BeyondTeam/Self-Bot.git -b supergroups
 cd Self-Bot
 chmod +x launch.sh
 ./launch.sh install
-./launch.sh # بعد از زدن این دستور از شما شماره و کد تایید میخواد
+./launch.sh 
+ بعد از زدن این دستور از شما شماره و کد تایید میخواد
 ```
-بعد از لانچ بات را خاموش کنید و به پوشه دیتا رفته و فایل کانفیگ رو باز کنید در این فایل باید خودتونو سودو کنید
+#بعد از لانچ بات را خاموش کنید و به پوشه دیتا رفته و فایل کانفیگ رو باز کنید در این فایل باید خودتونو سودو کنید
 ```
   sudo_users = {
     157059515,
     YourID
   }
 ```
-بعد از ان دوباره ربات خود رو لانچ کنید.
+#بعد از ان دوباره ربات خود رو لانچ کنید.
 
-برای ران کردن ربات با اتو لانچ از دستورات زیر استفاده کنید.
+#برای ران کردن ربات با اتو لانچ از دستورات زیر استفاده کنید.
 ```
 killall screen
 killall tmux
@@ -40,7 +41,8 @@ tmux new-session -s script "bash beyond.sh -t"
 
 # Special Thx To :
 Seed Team
-And All My Friends :D
+
+#And All My Friends :D
 
 ### Team Channel :
 
