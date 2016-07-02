@@ -21,7 +21,7 @@ local function run(msg,matches)
         end
        end
     
-      if matches[1]:lower() == "photo" then
+      if matches[1]:lower() == "photo" and is_sudo(msg) then
      redis:get("sticker:photo")
     send_large_msg(receiver, 'By @BeyondTeam :)', ok_cb, false)
         load_document(msg.reply_id, toimage, msg)
