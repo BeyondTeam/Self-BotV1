@@ -8,6 +8,9 @@
 # نحوه نصب کردن بر روی سرور
 
 # به ترتیب بزنید
+#Installation
+### Install dependencies.
+### Tested on Ubuntu 14.04.
 ```
 sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev
 cd $HOME
@@ -26,8 +29,12 @@ cd .luarocks/bin
 cd ../..
 ./launch.sh 
  بعد از زدن این دستور از شما شماره و کد تایید میخواد
+Then Enter Your Phone And Confirmation Code
 ```
 #بعد از لانچ بات را خاموش کنید و به پوشه دیتا رفته و فایل کانفیگ رو باز کنید در این فایل باید خودتونو سودو کنید
+###After you run the bot for first time, send it !id. Get your ID and stop the bot.
+
+###Open ./data/config.lua and add your ID to the "sudo_users" section in the following format:
 ```
   sudo_users = {
     157059515,
@@ -35,8 +42,10 @@ cd ../..
   }
 ```
 #بعد از ان دوباره ربات خود رو لانچ کنید.
+###Then restart the bot.
 
 #برای ران کردن ربات با اتو لانچ از دستورات زیر استفاده کنید.
+###For Launch With AutoLaunch :
 ```
 killall screen
 killall tmux
@@ -59,8 +68,10 @@ tmux new-session -s script "bash beyond.sh -t"
 #[@BeyondTeam](https://telegram.me/BeyondTeam)
 
 ###اگر مشکلی داشتید به لینک های زیر بیاید و مطرح کنید
+###If You Have Any Problem With Source, Join To Links And Ask About Your Problem
 #[TeleBeyond Support](https://telegram.me/joinchat/DH-5lD7jQzw--m36LgqOVA)
 
 #[Api-TeleBeyond Development](https://telegram.me/joinchat/CVyJuz6_PJBUrk_w--1JXw)
 
 #موفق باشید -_-
+#Good Luck -_-
