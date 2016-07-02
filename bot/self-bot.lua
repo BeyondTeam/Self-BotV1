@@ -214,6 +214,7 @@ function create_config( )
     enabled_plugins = {
     "set",
     "get",
+    "onservice",
     "plugins",
     "saveplug",
     "id",
