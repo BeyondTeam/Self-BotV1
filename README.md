@@ -39,7 +39,7 @@ tmux new-session -s script "bash beyond.sh -t"
 * * *
 
 # Special Thx To :
-Seed Team
+###Seed Team
 
 ###And All My Friends :D
 
