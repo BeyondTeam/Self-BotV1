@@ -1,4 +1,4 @@
-# Beyond Self Bot Version 1.0
+# Beyond Self Bot Version 2.0
 
 **An Fun bot based on [TeleSeed](https://github.com/SEEDTEAM/TeleSeed) licensed under the [GNU General Public License](https://github.com/BeyondTeam/Self-Bot/blob/master/LICENSE)**.
 
