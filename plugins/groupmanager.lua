@@ -1,4 +1,5 @@
 --By @SoLiD021
+--By @SoLiD021
 do
 local function silent_by_reply(extra, success, result) 
   vardump(result)
@@ -150,7 +151,7 @@ if matches[1] == 'setlink' and is_sudo(msg) then
                 else
                     send_msg('user#id'..msg.from.id, 'SuperGroup Link :'..linktext, ok_cb, true)
                 end
-                return 'Link was sent in your private message'
+                return 'Link was sent in your pv'
             else
                 if msg.to.type == 'chat' then
                     send_msg('chat#id'..msg.to.id, 'Error*\nSend /newlink first', ok_cb, true)
@@ -301,8 +302,8 @@ return {
         "^[!/#](unsilent)$",
         "^[!/#](unsilent) (.*)$",
         "^[/!#](mute all)$",
-        "^[/!#](unmute all)$"
-        "^[/!#](mute status)$",
+        "^[/!#](unmute all)$",
+		     "^[/!#](mute status)$",
         "^[!/#](inv)$",
         "^[!/#](inv) (.*)$",
     },
