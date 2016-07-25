@@ -35,15 +35,6 @@ function run(msg, matches)
 🔴!dl plugin name
 🔹دریافت پلاگین از سرور به صورت فایل
 
-🔴!file (folder) (name.lua) 👉 (by reply)
-🔹اضافه کردن فایل یا پلاگین به پوشه
-مورد نظر با ریپلی
-❗بستگی به نوع فایل داره میتونه فرمت تغییر کنه مثلا photo.jpg❗
-
-🔴!dl (folder) (name.lua)
-🔹دانلود فایل مورد نظر از پوشه خاص
-❗بستگی به نوع فایل داره میتونه فرمت تغییر کنه مثلا sticker.webp❗
-
 🔴دستورات مدیریتی گروه👇
 
 🔴!setname (name)
@@ -84,13 +75,13 @@ function run(msg, matches)
 🔴!unsilent [id|reply]
 🔹درآوردن فرد مورد نظر از حالت بیصدا در سوپر گروه با (آیدی و ریپلی)
 
-🔴!silent all
+🔴!mute all
 🔹بیصدا کردن همه در سوپر گروه
 
-🔴!unsilent all
+🔴!unmute all
 🔹دراوردن سوپر گروه از حالت بیصدا
 
-🔴!silent status
+🔴!mute status
 🔹مشاهده وضعیت بیصدا در سوپر گروه
 
 🔴دستورات سرگرمی👇
