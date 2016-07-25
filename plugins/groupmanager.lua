@@ -150,7 +150,7 @@ if matches[1] == 'setlink' and is_sudo(msg) then
                 else
                     send_msg('user#id'..msg.from.id, 'SuperGroup Link :'..linktext, ok_cb, true)
                 end
-                return 'Link was sent in your pv'
+                return 'Link was sent in your private message'
             else
                 if msg.to.type == 'chat' then
                     send_msg('chat#id'..msg.to.id, 'Error*\nSend /newlink first', ok_cb, true)
