@@ -56,6 +56,9 @@ tmux new-session -s script "bash beyond.sh -t"
 #Developer&Founder : 
 #[SoLiD021](https://telegram.me/SoLiD021)
 
+#Developer&Manager : 
+#[AliReza](https://telegram.me/CliApi)
+
 * * *
 
 # Special Thx To :
