@@ -1,3 +1,36 @@
+--By @SoLiD021
+do
+local function silent_by_reply(extra, success, result) 
+  vardump(result)
+  if result.to.peer_type == 'channel' then
+    local chat = 'channel#id'..result.to.peer_id
+    if tonumber(result.from.peer_id) == tonumber(our_id) then -- Ignore bot
+      return "I won't silent myself"
+    end
+    send_large_msg(chat, "User "..result.from.first_name.." ["..result.from.peer_id.."] not alowed to chat. ")
+      -- Save on redis
+    local hash =  'silent:'..result.to.peer_id..':'..result.from.peer_id
+    redis:set(hash, true)
+  else
+    return 'Use this in Your Groups'
+  end
+end
+local function unsilent_by_reply(extra, success, result) 
+  vardump(result)
+  if result.to.peer_type == 'channel' then
+    local chat = 'channel#id'..result.to.peer_id
+    if tonumber(result.from.peer_id) == tonumber(our_id) then -- Ignore bot
+      return "I won't silent myself"
+    end
+    send_large_msg(chat, "User "..result.from.first_name.." ["..result.from.peer_id.."] alowed to chat. ")
+      -- Save on redis
+    local hash =  'silent:'..result.to.peer_id..':'..result.from.peer_id
+    redis:del(hash)
+  else
+    return 'Use this in Your Groups'
+   end
+end
+
 local function add_by_reply(extra, success, result)
     result = backward_msg_format(result)
     local msg = result
@@ -187,6 +220,70 @@ local chat = 'channel#id'..msg.to.id
         channel_set_about(chat, about, ok_cb, false)
         return 'Description has been setted'
     end
+
+if msg.to.type == "channel" then
+    if matches[1] == "silent" and is_sudo(msg) then
+      if type(msg.reply_id)~= "nil" then
+        msgr = get_message(msg.reply_id, silent_by_reply, false)
+      elseif string.match(matches[2], '^%d+$') then
+        local channel = msg.to.id
+        local user = matches[2]
+        local hash = 'silent:'..channel..':'..user
+        redis:set(hash, true)
+        return "User ["..matches[2].."] not alowed to chat."
+      end
+    end
+    if matches[1] == "unsilent" and is_sudo(msg) then
+   if type(msg.reply_id)~="nil" then
+     msgr = get_message(msg.reply_id, unsilent_by_reply, false)
+   elseif string.match(matches[2], '^%d+$') then
+     local channel = msg.to.id
+  local user = matches[2]
+     local hash = 'silent:'..channel..':'..user
+        redis:del(hash)
+        return "User ["..matches[2].."] alowed to chat."
+   end
+    end
+  end
+    
+    if matches[1] == 'mute all' and is_sudo(msg) then
+      
+            
+                    local hash = 'mate:'..msg.to.id
+                    redis:set(hash, true)
+                    return "Mute All Has Been Enabled"
+  elseif matches[1] == 'unmute all' and is_sudo(msg) then
+                    local hash = 'mate:'..msg.to.id
+                    redis:del(hash)
+                    return "Mute All Has Been Disabled"
+					end
+					if matches[1] == 'mute status' then
+                    local hash = 'mate:'..msg.to.id
+                    if redis:get(hash) then
+                    return "Mute All Is Enable"
+					else 
+					return "Mute All Is Disable"
+
+end
+end
+end
+
+local function pre_process (msg)
+  if msg.service then
+    return msg
+  end
+  
+  local lock = "silent:"..msg.to.id..":"..msg.from.id
+  local enable = redis:get(lock)
+  if enable and msg.to.type == "channel" then
+      delete_msg(msg.id, ok_cb, false)
+  end
+    local hash = 'mate:'..msg.to.id
+    if redis:get(hash) and msg.from.id and msg.to.type == 'channel' and not is_sudo(msg)  then
+	  delete_msg(msg.id, ok_cb, false)
+            return "mute all was enabled"
+        end
+  return msg
 end
 
 return {
@@ -199,8 +296,17 @@ return {
         '^[!/#](setdes) (.*)$',
         "^[!/#](kick)$",
         "^[!/#](kick) (.*)$",
+        "^[!/#](silent)$",
+        "^[!/#](silent) (.*)$",
+        "^[!/#](unsilent)$",
+        "^[!/#](unsilent) (.*)$",
+        "^[/!#](mute all)$",
+        "^[/!#](unmute all)$"
+        "^[/!#](mute status)$",
         "^[!/#](inv)$",
         "^[!/#](inv) (.*)$",
     },
-    run = run
+      run = run,
+pre_process = pre_process
 }
+end
