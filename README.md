@@ -1,4 +1,4 @@
-# Beyond Selhttps://telegram.me/BeyondTeam/2200 Bot Version 2.5
+# Beyond Self Bot Version 2.5
 
 **An Fun bot based on [TeleSeed](https://github.com/SEEDTEAM/TeleSeed) licensed under the [GNU General Public License](https://github.com/BeyondTeam/Self-Bot/blob/master/LICENSE)**.
 
