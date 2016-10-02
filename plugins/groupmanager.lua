@@ -166,11 +166,11 @@ if matches[1] == 'kick' and is_sudo(msg) then
                 get_message(msg.reply_id, chat_kick, false)
                 return
             end
-            if matches[1] == 'kick' and is_sudo(msg) then
+   if not string.match(matches[2], '^%d+$') then
                 local member = string.gsub(matches[2], '@', '')
                 resolve_username(member, kick_by_username, {chat_id=chat_id, member=member, chat_type=chat_type})
                 return
-            else
+     elseif string.match(matches[2], '^%d+$') then
                 local user_id = matches[2]
                 if msg.to.type == 'chat' then
                     chat_del_user('chat#id'..msg.to.id, 'user#id'..matches[2], ok_cb, false)
@@ -187,12 +187,12 @@ if matches[1] == 'kick' and is_sudo(msg) then
                 get_message(msg.reply_id, add_by_reply, false)
                 return
             end
-   if matches[1] == 'inv' and is_sudo(msg) then
+   if not string.match(matches[2], '^%d+$') then
                 local member = string.gsub(matches[2], '@', '')
                 print(chat_id)
                 resolve_username(member, add_by_username, {chat_id=chat_id, member=member, chat_type=chat_type})
                 return
-            else
+     elseif string.match(matches[2], '^%d+$') then
                 local user_id = matches[2]
                 if chat_type == 'chat' then
                     chat_add_user('chat#id'..chat_id, 'user#id'..user_id, ok_cb, false)
