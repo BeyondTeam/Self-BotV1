@@ -1,4 +1,4 @@
-# Beyond Self Bot Version 2.0
+# Beyond Selhttps://telegram.me/BeyondTeam/2200 Bot Version 2.5
 
 **An Fun bot based on [TeleSeed](https://github.com/SEEDTEAM/TeleSeed) licensed under the [GNU General Public License](https://github.com/BeyondTeam/Self-Bot/blob/master/LICENSE)**.
 
@@ -44,13 +44,14 @@ Then Enter Your Phone And Confirmation Code
 #بعد از ان دوباره ربات خود رو لانچ کنید.
 ###Then restart the bot.
 
+#بعد از نصب فایل زیر رو با فایل lua-tg.c در سرور جایگزین کنید
+#[lua-tg.c](https://telegram.me/BeyondTeam/2200)
+
 #برای ران کردن ربات با اتو لانچ از دستورات زیر استفاده کنید.
 ###For Launch With AutoLaunch :
 ```
-killall screen
-killall tmux
-killall telegram-cli
-tmux new-session -s script "bash beyond.sh -t"
+chmod 777 beyond.sh
+screen ./beyond.sh
 ```
 
 #Developer&Founder : 
@@ -72,7 +73,7 @@ tmux new-session -s script "bash beyond.sh -t"
 
 ###اگر مشکلی داشتید به لینک زیر بیاید و مطرح کنید
 ###If You Have Any Problem With Source, Join To Link And Ask About Your Problem
-#[White And TeleBeyond Support](https://telegram.me/joinchat/DH-5lD7jQzzsY5f8ngQnaQ)
+#[White And TeleBeyond Support](https://telegram.me/joinchat/DH-5lD7jQzzdiI3gnh4p4A)
 
 #موفق باشید -_-
 #Good Luck -_-
