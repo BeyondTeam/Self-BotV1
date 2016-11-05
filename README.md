@@ -71,7 +71,7 @@ screen ./beyond.sh
 
 ###اگر مشکلی داشتید به لینک زیر بیاید و مطرح کنید
 ###If You Have Any Problem With Source, Join To Link And Ask About Your Problem
-#[White And TeleBeyond Support](https://telegram.me/joinchat/DH-5lD7jQzzdiI3gnh4p4A)
+#[Group Support](https://telegram.me/joinchat/DH-5lD7jQzz0TsOC3Ar5Tg)
 
 #موفق باشید -_-
 #Good Luck -_-
