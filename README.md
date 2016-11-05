@@ -1,4 +1,5 @@
-# Beyond Self Bot Version 2.5
+# Beyond Self Bot Version 2.7
+###Best Source Of Self Bots :)
 
 **An Fun bot based on [TeleSeed](https://github.com/SEEDTEAM/TeleSeed) licensed under the [GNU General Public License](https://github.com/BeyondTeam/Self-Bot/blob/master/LICENSE)**.
 
@@ -43,9 +44,6 @@ Then Enter Your Phone And Confirmation Code
 ```
 #بعد از ان دوباره ربات خود رو لانچ کنید.
 ###Then restart the bot.
-
-#بعد از نصب فایل زیر رو با فایل lua-tg.c در سرور جایگزین کنید
-#[lua-tg.c](https://telegram.me/BeyondTeam/2200)
 
 #برای ران کردن ربات با اتو لانچ از دستورات زیر استفاده کنید.
 ###For Launch With AutoLaunch :
