@@ -288,7 +288,7 @@ local chat = 'channel#id'..msg.to.id
    end
 end
 ---------------
-         if matches[1] == 'left' and is_sudo(msg) then
+         if matches[1] == 'leave' and is_sudo(msg) then
              local bot_id = our_id 
 local receiver = get_receiver(msg)
        chat_del_user("chat#id"..msg.to.id, 'user#id'..bot_id, ok_cb, false)
@@ -338,7 +338,7 @@ return {
          "^[!/#](id)$",
         "^[!/#](gpid)$",
         "^[!/#](id) (.*)$",
-        "^[#!/](left)$",
+        "^[#!/](leave)$",
         '^[!/#](linkgp)$',
         '^[!/#](tosuper)$',
         '^[!/#](newlink)$',
