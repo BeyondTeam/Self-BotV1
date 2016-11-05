@@ -325,7 +325,7 @@ local  file = download_to_file(url,'text.webp')
 end
  -------------------
    if matches[1] == "version"  then --change this with anything you want
-        local text = "Beyond Self Bot V2.5\nAn Fun Bot Based On TeleSeed Written In Lua\n\nSudo User :\nDeveloper&Founder : @SoLiD021\nDeVeloper&Manager : @CliApi\n\nTeam Channel :\n@BeyondTeam\n\nSpecial Thx To :\nSeed Team\nAnd All My Friends :D\n\nBeyond Self Bot Version 2.5 On GitHub :\nGithub.com/BeyondTeam/Self-Bot"
+        local text = "Beyond Self Bot V2.7\nAn Fun Bot Based On TeleSeed Written In Lua\n\nSudo User :\nDeveloper&Founder : @SoLiD021\nDeVeloper&Manager : @CliApi\n\nTeam Channel :\n@BeyondTeam\n\nSpecial Thx To :\nSeed Team\nAnd All My Friends :D\n\nBeyond Self Bot Version 2.7 On GitHub :\nGithub.com/BeyondTeam/Self-Bot"
 return reply_msg(msg.id, text, ok_cb, false)
   end
 ---------------
